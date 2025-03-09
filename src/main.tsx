@@ -1,11 +1,17 @@
-// Learn more at developers.reddit.com/docs
-//cd C:\Users\joshu\myproject
+/*
+ *  this file serves as the main entry point
+ *  => initialize the reddit API
+ *  => load the main UI components: poll, story prompt
+ *  => handle state management (updating)
+ */
+
 import { Devvit, useState } from '@devvit/public-api';
 
 Devvit.configure({
   redditAPI: true,
 });
 
+/*
 // Add a menu item to the subreddit menu for instantiating the new experience post
 Devvit.addMenuItem({
   label: 'Add my post',
@@ -64,3 +70,4 @@ Devvit.addCustomPostType({
 });
 
 export default Devvit;
+*/
