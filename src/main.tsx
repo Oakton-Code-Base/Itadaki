@@ -1,4 +1,5 @@
 // Learn more at developers.reddit.com/docs
+//cd C:\Users\joshu\myproject
 import { Devvit, useState } from '@devvit/public-api';
 
 Devvit.configure({
@@ -16,7 +17,7 @@ Devvit.addMenuItem({
 
     const subreddit = await reddit.getCurrentSubreddit();
     const post = await reddit.submitPost({
-      title: 'My devvit post',
+      title: 'StoryTime Game',
       subredditName: subreddit.name,
       // The preview appears while the post loads
       preview: (
@@ -36,6 +37,11 @@ Devvit.addCustomPostType({
   render: (_context) => {
     const [counter, setCounter] = useState(0);
 
+    const rand = () => {
+      return Math.floor(Math.random() * 10) + 1;
+    };
+
+
     return (
       <vstack height="100%" width="100%" gap="medium" alignment="center middle">
         <image
@@ -46,10 +52,12 @@ Devvit.addCustomPostType({
           height="48px"
           width="48px"
         />
-        <text size="large">{`Click counter: ${counter}`}</text>
-        <button appearance="primary" onPress={() => setCounter((counter) => counter + 1)}>
-          Click me!
+        <text size="large">{`hey: ${counter}`}</text>
+        <button appearance="primary" onPress={() => setCounter(rand)}>
+          Generate
         </button>
+
+
       </vstack>
     );
   },
