@@ -4,6 +4,14 @@
  * => get the top genre poll result when prompting
  * 
  */
+ 
+import type {Context} from '@devvit/public-api';
+import { Devvit} from '@devvit/public-api';
+
+
+
+
+
 
 /*
 import { useEffect, useState } from 'react';
